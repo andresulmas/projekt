@@ -11,4 +11,3 @@ app.secret_key = "123"
 @app.route('/')
 def home():
     return render_template('home.html', title='Projektikaust')
-
