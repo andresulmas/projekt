@@ -1,13 +1,13 @@
-from flask import Flask, render_template
-
-__author__ = 'andres'
-
-
+#app.py
+from flask import Flask
 app = Flask(__name__)
-app.config.from_object('src.config')
-app.secret_key = "123"
 
 
-@app.route('/')
-def home():
-    return render_template('home.html', title='Projektikaust')
+@app.route("/")
+def hello():
+    return "tere"
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+
