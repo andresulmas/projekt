@@ -1,13 +1,18 @@
-#app.py
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template
 
+
+__author__ = 'andres'
+
+
+app = Flask(__name__)
+app.config.from_object('src.config')
+app.secret_key = "321"
 
 @app.route("/")
-def hello():
-    return "from git"
+def home():
+    return render_template('home.html')
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+#if __name__ == "__main__":
+#    app.run(host='0.0.0.0')
 
